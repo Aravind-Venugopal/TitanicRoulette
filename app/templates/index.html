@@ -2,7 +2,7 @@
 {% block content %}
 <form action = "/result" method="POST">
 
-  <div>
+  <!-- <div>
     <label for="color">Color</label>
     <input type="color" id="color" name="color" value="#e66465">
   </div>
@@ -15,11 +15,70 @@
   <div>
     <label for="weight">Weight (g)</label>
     <input type="range" min="85" max="265" value="175" class="slider" id="weight" name="weight">
+  </div> -->
+
+
+  <div>
+    <label for="pclass">Passenger Class</label>
+    <select id="pclass" name="pclass">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </div>
+
+  <div>
+    <input type="radio" id="male" name="sex" value="0">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="sex" value="1">
+    <label for="female">Female</label><br>
+  </div>
+
+  <div>
+    <label for="age">Age</label>
+    <input type="range" min="1" max="100" value="10" class="slider" id="age" name="age" step="1">
+  </div>
+
+  <div>
+    <label for="sib_sp">No. of Siblings or Spouses onboard</label>
+    <input type="range" min="0" max="10" value="0" class="slider" id="sib_sp" name="sib_sp" step="1">  </div>
+  <div>
+    <label for="par_ch">No. of Parents or Children onboard</label>
+    <input type="range" min="0" max="10" value="0" class="slider" id="par_ch" name="par_ch" step="1"> </div>
+  </div>
+
+  <div>
+    <label for="fare">Ticket Fare(£)</label>
+    <input type="range" min="0" max="600" value="100" class="slider" id="fare" name="fare"> </div> </div>
+
+  <div>
+    <label for="embarked">Port of Embarkation</label>
+    <select id="embarked" name="embarked">
+      <option value="0">Southampton</option>
+      <option value="1">Queenstown</option>
+      <option value="2">Cherbourg</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="deck">Residence Deck</label>
+    <select id="deck" name="deck">
+      <option value="1">A</option>
+      <option value="2">B</option>
+      <option value="3">C</option>
+      <option value="4">D</option>
+      <option value="5">E</option>
+      <option value="6">F</option>
+      <option value="7">G</option>
+      <option value="8">U</option>
+    </select>
   </div>
 
   <div>
     <button type="submit">Go</button>
   </div>
-
+<div>
+  
+</div>
 </form>
 {% endblock %}
