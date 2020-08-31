@@ -28,7 +28,7 @@
   </div>
 
   <div>
-    <input type="radio" id="male" name="sex" value="0">
+    <input type="radio" id="male" name="sex" value="0" checked>
     <label for="male">Male</label><br>
     <input type="radio" id="female" name="sex" value="1">
     <label for="female">Female</label><br>
@@ -36,20 +36,25 @@
 
   <div>
     <label for="age">Age</label>
-    <input type="range" min="1" max="100" value="10" class="slider" id="age" name="age" step="1">
+    <input type="range" min="1" max="100" value="10" class="slider" id="age" name="age" step="1"
+      oninput="this.form.amountInput.value=this.value">
+    <input type="number" name="amountInput" min="1" max="100" value="0" oninput="this.form.age.value=this.value" />
   </div>
 
   <div>
     <label for="sib_sp">No. of Siblings or Spouses onboard</label>
-    <input type="range" min="0" max="10" value="0" class="slider" id="sib_sp" name="sib_sp" step="1">  </div>
+    <input type="range" min="0" max="10" value="0" class="slider" id="sib_sp" name="sib_sp" step="1" oninput="this.form.amountInputSib.value=this.value">
+    <input type="number" name="amountInputSib" min="0" max="10" value="0" oninput="this.form.sib_sp.value=this.value" />  </div>
   <div>
     <label for="par_ch">No. of Parents or Children onboard</label>
-    <input type="range" min="0" max="10" value="0" class="slider" id="par_ch" name="par_ch" step="1"> </div>
+    <input type="range" min="0" max="10" value="0" class="slider" id="par_ch" name="par_ch" step="1"oninput="this.form.amountInputPar.value=this.value">
+    <input type="number" name="amountInputPar" min="0" max="10" value="0" oninput="this.form.par_ch.value=this.value" /> </div>
   </div>
 
   <div>
     <label for="fare">Ticket Fare(£)</label>
-    <input type="range" min="0" max="600" value="100" class="slider" id="fare" name="fare"> </div> </div>
+    <input type="range" min="0" max="600" value="100" class="slider" id="fare" name="fare" oninput="this.form.amountInputFare.value=this.value">
+    <input type="number" name="amountInputFare" min="0" max="600" value="0" oninput="this.form.fare.value=this.value" /> </div> </div>
 
   <div>
     <label for="embarked">Port of Embarkation</label>
